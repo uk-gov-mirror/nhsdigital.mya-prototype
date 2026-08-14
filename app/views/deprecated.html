@@ -1,0 +1,58 @@
+{% extends "prototype-kit-template.njk" %}
+{% set pageName = "This prototype has moved" %}
+
+{% block head %}
+  <link href="/main.css" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
+  <header class="nhsuk-header" role="banner" data-module="nhsuk-header">
+    <div class="nhsuk-header__container nhsuk-width-container">
+      <div class="nhsuk-header__service">
+        <span class="nhsuk-header__service-logo">
+          <svg class="nhsuk-header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" height="40" width="100" focusable="false" role="img" aria-label="NHS">
+            <title>NHS</title>
+            <path fill="currentcolor" d="M200 0v80H0V0h200Zm-27.5 5.5c-14.5 0-29 5-29 22 0 10.2 7.7 13.5 14.7 16.3l.7.3c5.4 2 10.1 3.9 10.1 8.4 0 6.5-8.5 7.5-14 7.5s-12.5-1.5-16-3.5L135 70c5.5 2 13.5 3.5 20 3.5 15.5 0 32-4.5 32-22.5 0-19.5-25.5-16.5-25.5-25.5 0-5.5 5.5-6.5 12.5-6.5a35 35 0 0 1 14.5 3l4-13.5c-4.5-2-12-3-20-3Zm-131 2h-22l-14 65H22l9-45h.5l13.5 45h21.5l14-65H64l-9 45h-.5l-13-45Zm63 0h-18l-13 65h17l6-28H117l-5.5 28H129l13.5-65H125L119.5 32h-20l5-24.5Z" />
+          </svg>
+          <span class="nhsuk-header__service-name">{{ serviceName }}</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="nhsuk-width-container nhsuk-u-padding-top-1 nhsuk-u-padding-bottom-5">
+      <div class="nhsuk-grid-row app-hero nhsuk-u-padding-top-5">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-2">This prototype has moved</h1>
+          <p class="nhsuk-body-l">The Manage Your Appointments prototype you are looking for has been retired and is no longer being updated.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h2 class="nhsuk-heading-l nhsuk-u-margin-top-5">Use the new prototype instead</h2>
+      <p>All current Manage Your Appointments prototype work now lives at a new address. Anything you were looking for here — journeys, documentation and the service map — has moved there.</p>
+
+      {{ actionLink({
+        text: "Go to the new prototype",
+        href: NEW_PROTOTYPE_URL
+      }) }}
+
+      <h2 class="nhsuk-heading-s nhsuk-u-margin-top-5">If you have bookmarks or links</h2>
+      <p>Update any bookmarks, documents or tickets that point at this address. Links to individual pages on this old prototype will not work — start again from the homepage of the new prototype.</p>
+
+      <p class="nhsuk-u-margin-top-5">The new address is:<br>
+        <a class="nhsuk-link" href="{{ NEW_PROTOTYPE_URL }}">{{ NEW_PROTOTYPE_URL }}</a>
+      </p>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer({}) }}
+{% endblock %}
